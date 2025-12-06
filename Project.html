@@ -111,19 +111,112 @@
 
 <h3>Escapement</h3>
 
-<p>To try escapement mechanisms a swiss lever escapement was 3D printed moel was taken from Bambulab´s database.</p>
+<p>To try escapement mechanisms a swiss lever escapement was 3D printed. The <a href="https://makerworld.com/models/1029847">model</a> was taken from Makerworld.</p>
 <span class="image main"><img src="images/escapement.png" alt="" /></span>
 
 <div class="flex-container">
-  <img src="images/gcode.jpg" alt="Phone holder CAD design" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
-  <p>A lathe is a versatile machine tool primarily used to shape workpieces by rotating them around a fixed axis while a cutting tool is fed against the material to remove unwanted parts to create the desired shape. The workpiece is held securely between two supports, either centers or in a chuck mounted on the spindle within the headstock. The main components include the bed (which provides a stable base and guideways), the headstock (housing the spindle and driving mechanism), the carriage (which holds and moves the cutting tool), and the tailstock (providing support at the opposite end of the workpiece).</p>
+  <img src="images/swiss.png" alt="Phone holder CAD design" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
+  <p>The initial 3D print of the Swiss lever escapement on the Prusa MK4 failed to function reliably. It initially ticked 2-5 times before stopping, and later the drive weight fell continuously as the pallet fork failed to lock the escape wheel.
+	<br> Probable causes:
+	<br>- Low print quality: surface resolution and accuracy on Prusa MK4 ->surfaces too rough, preventing smooth unlocking/locking
+	<br>- Dimensional inaccuracies: Critical tolerances (0.1-0.2mm for lever drop, fork angles) exceeded due to print shrinkage or extrusion inconsistencies.
+  </p>
+</div>
+<p>Switched to a pendulum escapement because the Swiss lever's ultra-precise tolerances (0.1mm) and smooth surfaces proved unreliable with Prusa MK4 3D printing quality, while pendulums offer more forgiving mechanics with larger clearances.</p>
+<ul>
+	<h3>Pendulum advantages:</h3>
+  <li>Gravity-driven → Less friction-sensitive vs. spring tension</li>
+  <li>Longer period (2s swing) → Easier to manufacture and debug</li>
+  <li>Visual feedback during testing</li>
+</ul>
+    
+<h3>Pendulum Clock</h3>
+
+<p>The <a href="https://makerworld.com/models/1242934">3D-model</a> of the clock was taken from Makerworld</p>
+<span class="image main"><img src="images/clock1.png" alt="" /></span>
+<span class="image main"><img src="images/clock2.png" alt="" /></span>
+<span class="image main"><img src="images/frame.png" alt="" /></span>
+
+<div style="display: flex; gap: 20px; align-items: center;">
+  <video width="640" height="360" controls autoplay muted loop>
+    <source src="images/frame.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div style="max-width: 600px;">
+    <h3>Printing of Parts</h3>
+    <p>All parts were printed using a Bambulab P1S, 0.4mm nozzle and post-processed with a lighter and knife for deburring.</p>
+  </div>
+</div>
+<br>								
+									<h3>Additional non 3D-printed parts</h3>
+									<ul>
+  <li>M6 threaded rod 1m</li>
+  <li>M6 threaded rod 0.3m</li>
+  <li>M6 nuts</li>
+  <li>fishing line</li>
+  <li>wood screws for mounting</li>
+  <li>lubricant</li>
+</ul>
+<h2>Assembly</h2>
+									<div class="box alt">
+										<div class="row gtr-uniform">
+											<div class="col-12"><span class="image fit"><img src="images/pic13.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+											<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
+										</div>
+
+										<br>
+
+<div class="flex-container" style="display: flex; align-items: flex-start; gap: 20px;">
+  <video src="images/testrun.mp4" width="340" 
+         style="border-radius: 8px; object-fit: cover; width: 360px; height: 640px;" 
+         autoplay muted loop controls>
+  </video>
+  <div style="flex: 1;">
+    <br><br><h3>First testrun</h3>
+    <p>The initial test ran for 30 minutes before stopping, likely due to the pendulum weight rotating and getting stuck on the wooden backplate.</p>
+    
+    <h3>Second testrun</h3>
+    <p>After fixing the pendulum weight, the second run operated smoothly with only a 1-minute offset after one full hour of runtime.</p>
+  </div>
 </div>
 
-    
-<div class="flex-container1">
-  <p>The fundamental working principle involves the rotation of the workpiece at controlled spindle speeds while the cutting tool is advanced either parallel or perpendicular to the axis of rotation, enabling operations such as turning, facing, threading, grooving, drilling, and taper cutting. The cutting tool can be manually fed or moved automatically via mechanisms like lead screws and feed rods, allowing precise control of depth and feed rates.</p>
-  <img src="images/cnc1.jpg" alt="Additive manufacturing materials illustration" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
+<br>
+<h2>Watchface</h2>
+<p>To create a custom watchface, laser cutting/engraving was used.</p>
+
+<div class="flex-container">
+  <img src="images/uhrgrundform.jpg" alt="Phone holder CAD design" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
+  
+	<ul>
+  <li>Incscape</li>
+  <li>Setup circle 240mm (red Hairline to cut)</li>
+  <li>Center circle 150mm (red Hairline to cut)</li>
+  <li>Group</li>
+</ul>
+	 
 </div>
+<br>
+<div class="flex-container">
+  <img src="images/Uhrincscapedatei.jpg" alt="Phone holder CAD design" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
+  
+	<ul>
+  <li>Add picture of watch face </li>
+  <li>Create Bitmap of picture</li>
+  <li>Use grouped circles to cut watch face</li>
+  <li>Export as .svg</li>
+</ul>
+	 
+</div>
+
+
 
 <style>
   .flex-container1 {
@@ -139,20 +232,32 @@
   }
 </style>
 
-
-    <!-- Flex container to position video and paragraph side by side -->
-    <div class="flex-container">
-      <video width="360" height="360" autoplay muted loop;object-fit: cover>
-        <source src="images/drehen.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-      <p>Lathes are widely used for producing cylindrical parts with high accuracy and efficiency in industries ranging from manufacturing to prototyping. The process allows working with a variety of materials including metals, plastics, and wood. Traditional manual lathes require skilled operators to set feeds and speeds, while CNC lathes automate these functions to enhance precision and repeatability, using programmed instructions called G-code.</p>
-    </div>
-
-    <div class="flex-container1">
-  <p>Overall, the lathe remains a fundamental machine tool in production engineering due to its flexibility, precision, and ability to perform numerous machining operations on a rotating workpiece efficiently.</p>
-  <img src="images/wood.png" alt="Additive manufacturing materials illustration" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
+<br>
+ <!-- Flex container to position video and paragraph side by side -->
+<div class="flex-container" style="display: flex; align-items: center; gap: 20px;">
+  <video width="360" height="360" autoplay muted loop controls 
+         style="border-radius: 8px; object-fit: cover;">
+    <source src="images/laseruhr.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+	<ul>
+  		<li>Cut/engrave with  <a href="https://openlab-hamburg.de/wp-content/uploads/2018/08/Lasercutter_V2.pdf">Lasercutter trotec speedy 100 C 40 </a></li>
+  
+</ul>
 </div>
+<br>
+
+<div class="flex-container">
+  <img src="images/watchfacefinal.png" alt="Phone holder CAD design" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
+  
+	<ul>
+  <li>final pruduct</li>
+  
+</ul>
+	 
+</div>
+
     
     <p></p>
   </div>
