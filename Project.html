@@ -9,7 +9,7 @@
 
 <html>
 	<head>
-		<title>Lathe</title>
+		<title>Project</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -54,11 +54,67 @@
 				<!-- Main -->
 					<div id="main">
   <div class="inner">
-    <h1>Lathe</h1>
-	<h2>Instruction Manual <a href="https://openlab-hamburg.de/wp-content/uploads/2018/07/Maschinenbeschreibung-Drehmaschine.pdf">Drehmaschine PD400  </a></h2>
-    <span class="image main"><img src="" alt="" /></span>
+    <h1>Project</h1>
+	<h2>This project documents the design and assembly of a mechanical clock. </h2>
 
-	<div class="flex-container">
+<h3>Gear train</h3>
+<p> I Designed a simple gear train to look at the basic principle how an easy mechanical clock works.</p>
+<span class="image main"><img src="images/geartrain2.png" alt="" /></span>
+
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Gear Position</th>
+													<th>Wheel Teeth</th>
+													<th>Pinion Teeth</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Escapement</td>
+													<td>30</td>
+													<td>8</td>
+												</tr>
+												<tr>
+													<td>Intermediate</td>
+													<td>60</td>
+													<td>8</td>
+												</tr>
+												<tr>
+													<td>Minute</td>
+													<td> 64</td>
+													<td>18</td>
+												</tr>
+												<tr>
+													<td>Intermediate</td>
+													<td>72</td>
+													<td>10</td>
+												</tr>
+												<tr>
+													<td>Hour</td>
+													<td>30</td>
+													<td></td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td></td>
+												</tr>
+											</tfoot>
+										</table>
+<p>If the escapement gear turns once a minute, a ratio of 60:1 is needed for the minute gear to turn once per hour.
+<br>Total ratio escapement to minute wheel: (60/8) × (64/8) = 7.5 × 8 = 60:1</p>
+
+<p>For the hour gear to turn once per hour, a 12:1 ratio is needed from the minute to the hour gear.<br>Total ratio minute to hour wheel: (72/18) × (30/10) = 4 × 3 = 12:1 </p>
+
+<h3>Escapement</h3>
+
+<p>To try escapement mechanisms a swiss lever escapement was 3D printed moel was taken from Bambulab´s database.</p>
+<span class="image main"><img src="images/escapement.png" alt="" /></span>
+
+<div class="flex-container">
   <img src="images/gcode.jpg" alt="Phone holder CAD design" width="360" height="360" style="border-radius: 8px; object-fit: cover;" />
   <p>A lathe is a versatile machine tool primarily used to shape workpieces by rotating them around a fixed axis while a cutting tool is fed against the material to remove unwanted parts to create the desired shape. The workpiece is held securely between two supports, either centers or in a chuck mounted on the spindle within the headstock. The main components include the bed (which provides a stable base and guideways), the headstock (housing the spindle and driving mechanism), the carriage (which holds and moves the cutting tool), and the tailstock (providing support at the opposite end of the workpiece).</p>
 </div>
